@@ -13,6 +13,8 @@
 		77B083001C401DA300F8B71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B082FF1C401DA300F8B71C /* Assets.xcassets */; };
 		77B083031C401DA300F8B71C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B083011C401DA300F8B71C /* LaunchScreen.storyboard */; };
 		77B0830E1C401DA300F8B71C /* Address_Book_AccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0830D1C401DA300F8B71C /* Address_Book_AccessTests.swift */; };
+		77B083191C401DD000F8B71C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B083181C401DD000F8B71C /* AddressBook.framework */; };
+		77B0831B1C401DD600F8B71C /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0831A1C401DD600F8B71C /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		77B083091C401DA300F8B71C /* Address Book AccessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Address Book AccessTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B0830D1C401DA300F8B71C /* Address_Book_AccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address_Book_AccessTests.swift; sourceTree = "<group>"; };
 		77B0830F1C401DA300F8B71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77B083181C401DD000F8B71C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		77B0831A1C401DD600F8B71C /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B0831B1C401DD600F8B71C /* AddressBookUI.framework in Frameworks */,
+				77B083191C401DD000F8B71C /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 		77B082EC1C401DA300F8B71C = {
 			isa = PBXGroup;
 			children = (
+				77B0831A1C401DD600F8B71C /* AddressBookUI.framework */,
+				77B083181C401DD000F8B71C /* AddressBook.framework */,
 				77B082F71C401DA300F8B71C /* Address Book Access */,
 				77B0830C1C401DA300F8B71C /* Address Book AccessTests */,
 				77B082F61C401DA300F8B71C /* Products */,

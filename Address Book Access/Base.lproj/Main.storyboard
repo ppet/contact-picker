@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Address_Book_Access" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IME-oV-Asn">
+                                <rect key="frame" x="20" y="349" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbf-Vp-cbW">
+                                <rect key="frame" x="20" y="378" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhR-i8-eau">
+                                <rect key="frame" x="199" y="116" width="202" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="WF0-uT-TkL"/>
+                                </constraints>
+                                <state key="normal" title="Tap Me !"/>
+                                <connections>
+                                    <action selector="showPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQy-Ui-EAo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rhR-i8-eau" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2gF-bA-EOG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Tbf-Vp-cbW" secondAttribute="leading" id="LRS-YR-nhl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rhR-i8-eau" secondAttribute="bottom" constant="419" id="bMb-df-Au3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IME-oV-Asn" secondAttribute="leading" id="jAa-wO-ZvT"/>
+                            <constraint firstItem="rhR-i8-eau" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="96" id="oZD-c6-PKY"/>
+                            <constraint firstItem="Tbf-Vp-cbW" firstAttribute="top" secondItem="IME-oV-Asn" secondAttribute="bottom" constant="8" symbolic="YES" id="plo-TU-UFj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tbf-Vp-cbW" secondAttribute="bottom" constant="201" id="tXj-02-rGy"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="h5p-vO-LNa"/>
+                    <connections>
+                        <outlet property="firstName" destination="IME-oV-Asn" id="2rh-Sg-7ca"/>
+                        <outlet property="phoneNumber" destination="Tbf-Vp-cbW" id="clU-Yf-ToP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1089" y="427"/>
         </scene>
     </scenes>
 </document>
